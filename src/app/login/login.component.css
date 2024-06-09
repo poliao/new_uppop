@@ -17,6 +17,10 @@
 .overlay-image {
     width: 80%; /* ปรับขนาดตามต้องการ */
 }
+.text-welcome {
+    margin-bottom: 5vh;
+}
+
 @media (max-width: 576px) {
     .image-container {
         position: relative;
@@ -37,5 +41,9 @@
     }
     .overlay-image {
         width: 80%; /* ปรับขนาดตามต้องการ */
+    }
+    .text-welcome {
+
+        margin-bottom: 5vh;
     }
 }

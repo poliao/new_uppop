@@ -1,0 +1,27 @@
+.no-underline {
+    text-decoration: none; /* Removes the underline */
+  }
+  
+  .profile {
+    outline: 1px solid #777;
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+  
+  .font-color {
+    color: #01919C;
+    margin: 0;
+  }
+  
+  .btn-custom {
+    background-color: #01919C;
+    color: #fff;
+    border-color: #01919C;
+  }
+  
+  .btn-custom:hover {
+    background-color: #006c73;
+    border-color: #006c73;
+    color: #fff;
+  }
+  
