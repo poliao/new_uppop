@@ -1,0 +1,74 @@
+<section class="h-100 gradient-custom-2" style="background-color: rgb(241, 241, 241);">
+    <app-nav>
+    </app-nav>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center">
+            <div class="col col-lg-9 col-xl-8">
+                <div class="card">
+                    <div class="rounded-top text-white d-flex flex-row" style="background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg); height:200px;">
+                        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                            <img src="https://img.freepik.com/premium-photo/number-1-white-background-golden-3d-rendered-number-with-gloss-metal-texture_154981-6778.jpg"
+                                alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                style="width: 150px; z-index: 1">
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-outline-dark text-body" data-mdb-ripple-color="dark" style="z-index: 1;">
+                                Edit profile
+                            </button>
+                        </div>
+                        <div class="ms-3" style="margin-top: 130px;">
+                            <h3>{{firstname}} {{lastname}}</h3>
+                            <p>{{typeuser}}</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-black bg-body-tertiary">
+                        
+                        <div class="d-flex justify-content-end text-center py-1 text-body">
+                            <div>
+                                <p class="mb-1 h5">478</p>
+                                <p class="small text-muted mb-0">Following</p>
+                            </div>
+                        </div>      
+                        <button type="button" *ngIf="logouts" (click)="logout()" class="btn btn-danger">Logout</button>  
+                        <button type="button" *ngIf="logins" routerLink="/login" class="btn btn-success">Login</button>              
+                    </div>
+                    <div class="card-body p-4 text-black">
+                        <div class="mb-5  text-body">
+                            <p class="lead fw-normal mb-1">PROFILE</p>
+                            <div class="p-4 bg-body-tertiary">
+                                <h5 class="font-italic mb-1">ชื่อผู้ใช้:{{username}}</h5>
+                                <h5 class="font-italic mb-1">อีเมล: {{email}}</h5>
+                                <h5 class="font-italic mb-1">ชื่อ-นามสกุล: {{firstname}} {{lastname}}</h5>
+                                <h5 class="font-italic mb-1">สังกัด/คณะ: {{major}}</h5>
+                                <h5 class="font-italic mb-1">ตำแหน่ง:  {{typeuser}}</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-4 text-body">
+                            <p class="lead fw-normal mb-0">Recent photos</p>
+                            <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col mb-2">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                                    alt="image 1" class="w-100 rounded-3">
+                            </div>
+                            <div class="col mb-2">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                                    alt="image 1" class="w-100 rounded-3">
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                                    alt="image 1" class="w-100 rounded-3">
+                            </div>
+                            <div class="col">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                                    alt="image 1" class="w-100 rounded-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">
+        <img src="https://img5.pic.in.th/file/secure-sv1/logouppop.png" alt="Logo" style="height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-center" style="flex: 1;">
+          <li class="nav-item me-lg-5">
+            <a class="nav-link text-center" routerLink="/">
+              <span class="d-lg-none">Home</span>
+              <img class="d-none d-lg-inline" [src]="home" alt="Home" style="height: 40px;">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" routerLink="/calendar">
+              <span class="d-lg-none">Calendar</span>
+              <img class="d-none d-lg-inline calendar" [src]="calendar" alt="Calendar" style="height: 40px;">
+            </a>
+          </li>
+          <li class="nav-item ms-lg-5">
+            <a class="nav-link text-center" routerLink="/following">
+              <span class="d-lg-none">Following</span>
+              <img class="d-none d-lg-inline" [src]="following" alt="Following" style="height: 40px;">
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" *ngIf="isAdmin">
+            <a class="nav-link text-center" routerLink="/adminedit">
+              <button class="btn btn-custom mx-3">
+                EDIT
+                <img src="https://img2.pic.in.th/pic/Edit.png" alt="Edit" style="height: 20px;">
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#">
+              <span class="d-lg-none">Notifications</span>
+              <img class="d-none d-lg-inline" src="https://img5.pic.in.th/file/secure-sv1/bell.png" alt="Notifications" style="height: 40px;">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link no-underline text-center" routerLink="/profile">
+              <div class="profile d-flex align-items-center">
+                <span class="d-lg-none">Profile</span>
+                <img class="d-none d-lg-inline" [ngClass]="profileimg" [src]="imagesrc" alt="Profile" style="height: 20px;">
+                <h5 class="ms-2 mb-0 d-none d-lg-inline font-color">บัญชีของฉัน</h5>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

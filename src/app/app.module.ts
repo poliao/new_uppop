@@ -5,20 +5,35 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { NevComponent } from './share/nev/nev.component';
+
+import { ProfileComponent } from './profile/profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './login/login.service';
+import {  provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { NavComponent } from './share/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NevComponent
+    NavComponent,
+
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    
+    
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    provideHttpClient(withInterceptorsFromDi()),
+    
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

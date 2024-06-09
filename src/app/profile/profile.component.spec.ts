@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NevComponent } from './nev.component';
+import { ProfileComponent } from './profile.component';
 
-describe('NevComponent', () => {
-  let component: NevComponent;
-  let fixture: ComponentFixture<NevComponent>;
+describe('ProfileComponent', () => {
+  let component: ProfileComponent;
+  let fixture: ComponentFixture<ProfileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NevComponent]
+      declarations: [ProfileComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NevComponent);
+    fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
