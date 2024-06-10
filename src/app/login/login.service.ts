@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  private apiUrl = 'http://localhost:8080/api/persons/login'; // URL ของ API ที่จะใช้
+  private apiUrl = 'https://testdeploy-qymn.onrender.com/api/persons/login'; // URL ของ API ที่จะใช้
 
   constructor(private http: HttpClient) { }
 
