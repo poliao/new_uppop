@@ -31,3 +31,14 @@
     border-radius: 60%;
     
 }
+
+.navbar-head{
+  position: relative;
+}
+.navbar-nav-canter{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  list-style: none;
+  padding: 0;
+}

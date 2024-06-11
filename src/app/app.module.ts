@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from './login/login.service';
 import {  provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NavComponent } from './share/nav/nav.component';
+import { EditComponent } from './edit/edit.component';
+import { EditDetailComponent } from './edit/edit-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,9 @@ import { NavComponent } from './share/nav/nav.component';
     LoginComponent,
     HomeComponent,
     NavComponent,
-
-    ProfileComponent
+    ProfileComponent,
+    EditComponent,
+    EditDetailComponent
   ],
   imports: [
     BrowserModule,
