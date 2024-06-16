@@ -1,13 +1,12 @@
 <app-nav></app-nav>
-<div class="container py-5 h-100">	<div class="center">
-    
+<div class="center">
     <div class="title">
         <h1>Drop file to upload</h1>
     </div>
     <div class="dropzone">
-        <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-        <input type="file" class="upload-input" />
+        <img src="http://100dayscss.com/codepen/upload.svg" *ngIf="closeimg" class="upload-icon" />
+        <img [src]="urlimg" class="upload-icon" *ngIf="showimg" style="max-width: 100%; height: auto;"/>
+        <input type="file" class="upload-input" (change)="onFileSelected($event)"/>
     </div>
-    <!-- <button type="button" class="btn" name="uploadbutton">Upload file</button> -->
-</div>
+    <button (click)="onUpload()">Upload</button>
 </div>

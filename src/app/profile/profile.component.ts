@@ -36,7 +36,7 @@ export class ProfileComponent implements OnInit {
     this.major = null;
     this.email = null;
     this.typeuser = null;
-    this.router.navigate(['/']);
+    window.location.reload();
     
   }
 
