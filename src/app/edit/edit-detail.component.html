@@ -1,12 +1,55 @@
 <app-nav></app-nav>
-<div class="center">
-    <div class="title">
-        <h1>Drop file to upload</h1>
-    </div>
-    <div class="dropzone">
-        <img src="http://100dayscss.com/codepen/upload.svg" *ngIf="closeimg" class="upload-icon" />
-        <img [src]="urlimg" class="upload-icon" *ngIf="showimg" style="max-width: 100%; height: auto;"/>
-        <input type="file" class="upload-input" (change)="onFileSelected($event)"/>
-    </div>
-    <button (click)="onUpload()">Upload</button>
+<div class="container mt-5">
+    <h2 class="text-center">Upload Image with Label</h2>
+    <form [formGroup]="form" >
+        <div class="form-group">
+            <div class="file-input-wrapper">
+                <i class="wd">
+                    <img src="http://100dayscss.com/codepen/upload.svg" *ngIf="closeimg" class="upload-icon" />
+                    <img [src]="urlimg" *ngIf="showimg" class="upload-icon" style="max-width: 100%; height: auto;" />
+                </i>
+                <input type="file" id="imageUpload" (change)="onFileSelected($event)">
+            </div>
+        </div><br>
+        <div class="form-group mb-3">
+            <label for="nameactivity">ชื่อกิจกรรม</label>
+            <input type="text" class="form-control" formControlName="nameActivity" placeholder="ชื่อกิจกรรม">
+        </div>
+        <div class="form-group mb-3">
+            <label for="detail">รายละเอียดกิจกรรม</label>
+            <input type="text" class="form-control"  formControlName="detail" placeholder="รายละเอียดกิจกรรม">
+        </div>
+        <div class="form-group mb-3">
+            <label for="location">กิจกรรมจัดที่</label>
+            <input type="text" class="form-control" formControlName="location" placeholder="กิจกรรมจัดที่">
+        </div>
+        <div class="form-group mb-3" >
+            <label for="category">หมวดหมู่กิจกรรม</label>
+            <select class="form-control" id="dropdown1" formControlName="category">
+                <option value="">เลือกคณะ</option>
+                <option value="ม.พะเยา">ม.พะเยา</option>
+                <option value="คณะ">คณะ</option>
+                <option value="ชมรม">ชมรม</option>
+                <option value="จิตอาสา">จิตอาสา</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="date_Start" formControlName="date_Start">
+        </div>
+        <div class="form-group mb-3">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="date_end" formControlName="date_end">
+        </div>
+        <div class="form-group mb-3">
+            <label for="startTime">Start Time</label>
+            <input type="time" class="form-control" id="time_Start" formControlName="time_Start">
+        </div>
+        <div class="form-group mb-3">
+            <label for="endTime">End Time</label>
+            <input type="time" class="form-control" id="time_end" formControlName="time_end">
+        </div>
+        
+        <button type="submit" (click)="onUpload()" class="btn btn-primary">Submit</button>
+    </form>
 </div>

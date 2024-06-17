@@ -7,9 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
 import { ProfileComponent } from './profile/profile.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from './login/login.service';
-import {  provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NavComponent } from './share/nav/nav.component';
 import { EditComponent } from './edit/edit.component';
 import { EditDetailComponent } from './edit/edit-detail.component';
@@ -27,6 +27,7 @@ import { EditDetailComponent } from './edit/edit-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     
     

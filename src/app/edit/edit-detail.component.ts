@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EditService } from './edit.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-detail',
@@ -13,11 +14,25 @@ export class EditDetailComponent {
   urlimg: any;
   showimg: boolean = false;
   closeimg: boolean = true;
+  form: FormGroup;
 
   constructor(
     private router: Router,
-    private editService: EditService
-  ) { }
+    private editService: EditService,
+    private fb: FormBuilder,
+  ) {
+    this.form = this.fb.group({
+      nameactivity: [null],
+      detail: [null],
+      location: [null],
+      category: [null],
+      date_Start: [null],
+      date_end: [null],
+      time_Start: [null],
+      time_end: [null],
+      urlimg: [null]
+    });
+  }
 
   onFileSelected(event: any): void {
     const file: File = event.target.files[0];
@@ -40,10 +55,16 @@ export class EditDetailComponent {
     if (this.selectedFile) {
       this.editService.uploadImage(this.selectedFile).subscribe(
         response => {
-          console.log('Upload successful:', response);
           this.urlimg = response.files[0].fileUrl;
-          console.log(this.urlimg);
-          
+          this.form.patchValue({ urlimg: this.urlimg });
+          this.editService.save(this.form.value).subscribe(
+            () => {
+              this.router.navigate(['/']);
+            },
+            error => {
+              console.error('Upload error:', error);
+            }
+          );
         },
         error => {
           console.error('Upload error:', error);
@@ -53,4 +74,5 @@ export class EditDetailComponent {
       console.error('No file selected');
     }
   }
+ 
 }

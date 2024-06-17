@@ -9,6 +9,7 @@ export class EditService {
 
   private apiUrl = 'https://api.bytescale.com/v2/accounts/FW25c6H/uploads/form_data';
   private apiKey = 'public_FW25c6H7CCoxWBnKwGUoM2aruQed';
+  private apibase = 'http://localhost:8080/api/activities'
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +20,11 @@ export class EditService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.apiKey}`
     });
-
     return this.http.post(this.apiUrl, formData, { headers });
+  }
+
+  save(FormData: any): Observable<any> {
+    return this.http.post(this.apibase, FormData);
+
   }
 }
