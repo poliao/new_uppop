@@ -1,1 +1,10 @@
-<app-nav>
+<app-nav></app-nav>
+<h1>แนะนำ</h1>
+<div class="card-group-scrollable">
+    <div class="card" *ngFor="let card of cards">
+        <img [src]="card.urlimg" class="card-img-top" [alt]="card.detail" />
+        <div class="card-body">
+            <h5 class="card-title">{{ card.detail }}</h5>
+        </div>
+    </div>
+</div>

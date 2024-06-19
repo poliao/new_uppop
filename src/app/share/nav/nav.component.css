@@ -1,44 +1,48 @@
 .no-underline {
-    text-decoration: none; /* Removes the underline */
-  }
-  
-  .profile {
-    outline: 1px solid #777;
-    padding: 5px;
-    border-radius: 12px;
-  }
-  
-  .font-color {
-    color: #01919C;
-    margin: 0;
-  }
-  
-  .btn-custom {
-    background-color: #01919C;
-    color: #fff;
-    border-color: #01919C;
-  }
-  
-  .btn-custom:hover {
-    background-color: #006c73;
-    border-color: #006c73;
-    color: #fff;
-  }
-  .profile-img{
-    width: 26.25px;
-    height: 26.25px;
-    flex-shrink: 0;
-    border-radius: 60%;
-    
+  text-decoration: none;
+  /* Removes the underline */
 }
 
-.navbar-head{
+.profile {
+  outline: 1px solid #777;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.font-color {
+  color: #01919C;
+  margin: 0;
+}
+
+.btn-custom {
+  background-color: #01919C;
+  color: #fff;
+  border-color: #01919C;
+}
+
+.btn-custom:hover {
+  background-color: #006c73;
+  border-color: #006c73;
+  color: #fff;
+}
+
+.profile-img {
+  width: 26.25px;
+  height: 26.25px;
+  flex-shrink: 0;
+  border-radius: 60%;
+
+}
+
+.navbar-head {
   position: relative;
 }
-.navbar-nav-canter{
+
+.navbar-nav-canter {
   position: absolute;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   list-style: none;
   padding: 0;
+  top: 15px;
 }

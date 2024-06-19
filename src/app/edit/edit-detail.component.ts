@@ -22,10 +22,10 @@ export class EditDetailComponent {
     private fb: FormBuilder,
   ) {
     this.form = this.fb.group({
-      nameactivity: [null],
+      nameActivity: [null],
       detail: [null],
       location: [null],
-      category: [null],
+      category: ['ม.พะเยา'],
       date_Start: [null],
       date_end: [null],
       time_Start: [null],

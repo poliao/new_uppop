@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  
+  constructor(private homeService: HomeService, ) { }
+  cards = [
+    {
+      urlimg: '',
+      detail: '',
+    },
+  ];
+  ngOnInit() {
+    this.test();
+  }
 
+  test() {
+    this.homeService.getActivities().subscribe(Response => {
+      console.log(Response);
+      this.cards = Response;
+    });
+  }
 }

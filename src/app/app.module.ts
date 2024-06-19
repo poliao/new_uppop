@@ -10,10 +10,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from './login/login.service';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { NavComponent } from './share/nav/nav.component';
+
 import { EditComponent } from './edit/edit.component';
 import { EditDetailComponent } from './edit/edit-detail.component';
-
+import { PlaceholderModule, GridModule, UtilitiesModule } from '@coreui/angular';
+import { NavComponent } from './share/nav/nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +23,18 @@ import { EditDetailComponent } from './edit/edit-detail.component';
     NavComponent,
     ProfileComponent,
     EditComponent,
-    EditDetailComponent
+    EditDetailComponent,
+  
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    PlaceholderModule,
+    GridModule,
+    UtilitiesModule
     
     
   ],
